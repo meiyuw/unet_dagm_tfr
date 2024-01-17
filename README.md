@@ -38,12 +38,11 @@ This model is trained with mixed precision using Tensor Cores on Volta, Turing, 
  
 ### Model architecture
  
-UNet was first introduced by Olaf Ronneberger, Philip Fischer, and Thomas Brox in the paper: [UNet: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597). UNet allows for seamless segmentation of 2D images, with high accuracy and performance, and can be adapted to solve many different segmentation problems.
- 
-The following figure shows the construction of the UNet model and its different components. UNet is composed of a contractive and an expanding path, that aims at building a bottleneck in its centermost part through a combination of convolution and pooling operations. After this bottleneck, the image is reconstructed through a combination of convolutions and upsampling. Skip connections are added with the goal of helping the backward flow of gradients in order to improve the training.
- 
-![UNet](images/unet.png) 
-Figure 1. The architecture of a UNet model. Taken from the <a href="https://arxiv.org/abs/1505.04597">UNet: Convolutional Networks for Biomedical Image Segmentation paper</a>.
+The UNet model is a convolutional neural network for 2D image segmentation. This repository contains a UNet implementation as described in [Cerebras modelzoo R1.6.0](https://github.com/Cerebras/modelzoo/tree/R_1.6.0/modelzoo/unet).
+
+UNet is composed of a contractive and an expanding path, that aims at building a bottleneck in its centermost part through a combination of convolution and pooling operations. After this bottleneck, the image is reconstructed through a combination of convolutions and upsampling. Skip connections are added with the goal of helping the backward flow of gradients in order to improve the training.
+
+Please see [Cerebras modelzoo R1.6.0](https://github.com/Cerebras/modelzoo/tree/R_1.6.0/modelzoo/unet) for details about model architecture.
  
 ### Default configuration
  
