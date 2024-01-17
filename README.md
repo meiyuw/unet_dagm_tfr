@@ -1,6 +1,6 @@
 # UNet Medical Image Segmentation for TensorFlow 2.x
- 
-This repository provides a script and recipe to train UNet Medical to achieve state of the art accuracy, and is tested and maintained by NVIDIA.
+
+This repository provides a script and recipe to train UNet model that modify the [Nvidia Unet Medical](https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow2/Segmentation/UNet_Medical) example to reflect the [Cerebras modelzoo R1.6.0](https://github.com/Cerebras/modelzoo/tree/R_1.6.0/modelzoo/unet) implementation. The dataset is DAGM 2007, which is a synthetic dataset for defect detection on textured surfaces.
  
  
 ## Table of Contents
