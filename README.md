@@ -1,6 +1,6 @@
 # UNet Medical Image Segmentation for TensorFlow 2.x
 
-This repository provides a script and recipe to train UNet model that modify the [Nvidia Unet Medical](https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow2/Segmentation/UNet_Medical) example to reflect the [Cerebras modelzoo R1.6.0](https://github.com/Cerebras/modelzoo/tree/R_1.6.0/modelzoo/unet) implementation. The dataset is DAGM 2007, which is a synthetic dataset for defect detection on textured surfaces.
+This repository provides a script and recipe to train UNet model that modify the [Nvidia Unet Medical](https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow2/Segmentation/UNet_Medical) example to reflect the [Cerebras modelzoo R1.6.0](https://github.com/Cerebras/modelzoo/tree/R_1.6.0/modelzoo/unet) implementation. The dataset is DAGM 2007, which is a synthetic dataset for defect detection on textured surfaces. The horovod features are removed for testing purposes.
  
  
 ## Table of Contents
@@ -57,7 +57,6 @@ The following features are supported by this model:
 | **Feature** | **UNet Medical** |
 |-------------|---------------------|
 | Automatic mixed precision (AMP) | Yes |
-| Horovod Multi-GPU (NCCL)        | Yes |
 | Accelerated Linear Algebra (XLA)| Yes |
  
 #### Features
@@ -66,13 +65,6 @@ The following features are supported by this model:
  
 This implementation of UNet uses AMP to implement mixed precision training. It allows us to use FP16 training with FP32 master weights by modifying just a few lines of code.
  
-**Horovod**
- 
-Horovod is a distributed training framework for TensorFlow, Keras, PyTorch, and MXNet. The goal of Horovod is to make distributed deep learning fast and easy to use. For more information about how to get started with Horovod, see the [Horovod: Official repository](https://github.com/horovod/horovod).
- 
-Multi-GPU training with Horovod
- 
-Our model uses Horovod to implement efficient multi-GPU training with NCCL. For details, see example sources in this repository or see the [TensorFlow tutorial](https://github.com/horovod/horovod/#usage).
  
 **XLA support (experimental)**
  
